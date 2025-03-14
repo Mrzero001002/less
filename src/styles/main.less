@@ -1,0 +1,27 @@
+@import 'variaveis.less';
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(max-width: 1023px)";
+// Spcaping, quando escrevemos um contéudo 🔝ele será compilado
+
+body{
+    background-color:@cordefundo;
+    color: @CorPrincipal;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    
+    @media @breakpointTablet{
+        max-width: 80%;
+    }
+    
+    @media @breakpointMobile {
+        max-width: 70%;
+    }
+
+
+    // Efeito cascata: Caso tenhamos 2 breakpoints o com maior valor EX: Tablet com 1023, ele ocupará também a versão de cell
+    // Então colocar ele para ocorrer antes do break de celular.
+}
