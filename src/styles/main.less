@@ -1,17 +1,37 @@
-@import 'variaveis.less';
+@import 'mapas.less';
+
 @breakpointMobile: ~"(max-width: 767px)";
 @breakpointTablet: ~"(max-width: 1023px)";
 // Spcaping, quando escrevemos um contéudo 🔝ele será compilado
 
+.marginbottom8{
+    margin-bottom: 8px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
 body{
-    background-color:@cordefundo;
-    color: @CorPrincipal;
+    background-color:#colors[backgroundColor];
+    color: #colors[textcolor];
+}
+
+li{
+    list-style: none;
 }
 
 .container {
     max-width: 960px;
     width: 100%;
     margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
     @media @breakpointTablet{
         max-width: 80%;
@@ -24,4 +44,75 @@ body{
 
     // Efeito cascata: Caso tenhamos 2 breakpoints o com maior valor EX: Tablet com 1023, ele ocupará também a versão de cell
     // Então colocar ele para ocorrer antes do break de celular.
+}
+
+header{
+    padding-bottom: 24px;
+
+    .profile-avatar {
+        display: block;
+        margin: 0 auto 24px;
+        height: 190px;
+        border-radius: 50%;
+    }
+}
+
+.profile-bio{
+    text-align: center;
+    &-name{
+        font-size: 16px;
+        .marginbottom8();
+    }
+
+    &-work{
+        font-size: 14px;
+        .marginbottom8();
+    }
+
+    &-desc{
+        font-size: 14px;
+        opacity: 0.7;
+    }
+}
+
+.social-links{
+    display: flex;
+    justify-content: space-between;
+    max-width: 240px;
+    width: 100%;
+    margin: 0 auto;
+    li{
+
+        img{
+            transition: all ease .3s;
+            &:hover{
+                transform: scale(1.6);
+            }
+        }
+    }
+}
+
+.projetos{
+    margin-top: 32px;
+
+    &-itens{
+        a{
+            text-decoration: none;
+            background-color: #colors[buttoncolor];
+            display: block;
+            padding: 26px 20px;
+            margin-bottom: 16px;
+            border: 2px solid #colors[buttoncolor];
+            border-radius: 30px;
+            text-align: center;
+            color: #colors[textcolor];
+            font-weight: bold;
+            transition: all ease .5s;
+
+            &:hover{
+                background-color: transparent;
+                color: #colors[buttoncolor];
+            }
+        }
+    }
 }

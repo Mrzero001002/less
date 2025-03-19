@@ -5,26 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página do Zero</title>
     <link rel="stylesheet" href="./build/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="https://fakeimg.pl/200x200"/>
-            <h1>Página do Zero</h1>
-            <h2>Engenheiro front-end</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure unde pariatur corporis, voluptatibus minus nesciunt odit nemo quis impedit, hic velit et veniam magni assumenda veritatis totam consequuntur molestias neque.
-            </p>
-        
+            <img class="profile-avatar" src="./src/imgs/5bc4c7646fe1648c4d3d4ae406fa2baa.jpg"/>
+            <div class="profile-bio">
+                <h1 class="profile-bio-name">Página do Zero</h1>
+                <h2 class="profile-bio-work">Engenheiro front-end</h2>
+                <p class="profile-bio-desc">
+                    Olá sou o Zero prazer em conhecer você, eu não sou muito ativo no instagram, mas possuo mais ativade em si no discord, caso queira me contatar para criação de sites utilizando Html e CSS, ID do discord @Zero_zero, abaixo terão outros projetos que já fiz no github
+                </p>
+            </div>
         </header>
         <nav>
-            <ul>
-                <li><a href="">Instagram</a></li>
-                <li><a href="">Linkedin</a></li>
-                <li><a href="">GitHub</a></li>
-                <li><a href="">Email</a></li>
-            </ul>A
+            <ul class="social-links">
+                <li>
+                    <a href="https://www.instagram.com/pedro_fagiani_martins/">
+                        <img src="./src/imgs/instagram.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Mrzero001002">
+                        <img src="./src/imgs/github.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="pedrofagiane4@gmail.com">
+                        <img src="./src/imgs/inbox.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./src/imgs/linkedin.svg" alt="Linkedin não possuido">
+                    </a>
+                </li>
+            </ul>
             <!-- Para fazer escrever mais de 1 linha por vez faz assim "ul>li*4>a" -->
+        </nav>
+        <nav>
+            <ul class="projetos">
+                <li class="projetos-itens">
+                    <a href="https://github.com/Mrzero001002/Projeto_Calculadora_M-dias">
+                        Visite o Projeto "Calculadora de médias"
+                    </a>
+                </li>
+                <li class="projetos-itens">
+                    <a href="https://github.com/Mrzero001002/Site_games_shop">
+                        Visite o Projeto "Games Shop"
+                    </a>
+                </li>
+                <li class="projetos-itens">
+                    <a href="https://github.com/Mrzero001002/Site_games_shop">
+                        Visite o Projeto "Página sobre warhammer 40k"
+                    </a>
+                </li>
+            </ul>
         </nav>
     </div>
 </body>
